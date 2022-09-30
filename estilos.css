@@ -1,0 +1,89 @@
+#form {
+    border:1px solid #990000;
+    width:450px;
+    margin:auto;
+}
+#form legend{
+    font-weight:bold;
+    font-size:12px;
+}
+#form ol{
+    list-style:none;
+}
+#form ol li{
+    padding-bottom:5px;
+}
+#form ol li label{
+    width:120px;
+    float:left;
+    text-align:left;
+}
+#form input[type=text] {
+    border:1px solid #CCCCCC;
+}
+#form input.btn {
+    padding:3px;
+    color:#FFFFFF;
+    background-color:#990000;
+    border:1px solid #000000;
+}
+
+#formu {
+    border:1px solid blue;
+    width:450px;
+    margin:auto;
+}
+#formu legend{
+    font-weight:bold;
+    font-size:12px;
+}
+#formu ol{
+    list-style:none;
+}
+#formu  ol li{
+    padding-bottom:5px;
+}
+#formu ol li label{
+    width:120px;
+    float:left;
+    text-align:left;
+}
+#formu input[type=text] {
+    border:1px solid #CCCCCC;
+}
+#formu input.boton {
+    padding:3px;
+    color:#FFFFFF;
+    background-color: rgb(13, 13, 51);
+    border:1px solid #000000;
+}
+
+#formul {
+    border:1px solid rgb(4, 92, 30);
+    width:450px;
+    margin:auto;
+}
+#formul legend{
+    font-weight:bold;
+    font-size:12px;
+}
+#formul ol{
+    list-style:none;
+}
+#formul  ol li{
+    padding-bottom:5px;
+}
+#formul ol li label{
+    width:120px;
+    float:left;
+    text-align:left;
+}
+#formul input[type=text] {
+    border:1px solid #CCCCCC;
+}
+#formul input.submit {
+    padding:3px;
+    color:#FFFFFF;
+    background-color: rgb(10, 58, 18);
+    border:1px solid #000000;
+}
