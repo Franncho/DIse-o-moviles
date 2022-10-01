@@ -76,14 +76,15 @@ const form3 = document.getElementById('formu3').addEventListener('submit', funct
     const nose = document.querySelector('.viajes');
 
     const viaje = document.createElement('viaje')
-    viaje.innerHTML = ` El destino es: ${destino}, La Cantidad de Personas: ${personas}, Los Km son: ${km}, El Precio de la Nafta: ${nafta}, Precio por noche (x persona): ${noche}, Dias de Viaje: ${dias}`;
+    const gasto = document.createElement('div')
+    viaje.innerHTML = ` El destino es: ${destino}, La Cantidad de Personas: ${personas}, Los Km son: ${km}, El Precio de la Nafta: ${nafta}, Precio por noche (C/U): ${noche}, Dias de Viaje: ${dias}`;
 
     let combustibles = gastoNafta(km, consumo, nafta);
     let estadias = gastoNoches(personas, noche, dias);
 
-    gastoNafta.innerHTML = `El gasto en nafta es: $` + combustibles
-    gastoNoches.innerHTML = `El gasto por noche: $` + estadias
-
+    gasto.innerHTML = `El gasto en nafta es: $${combustibles} <br> El gasto por noche: $${estadias}`;
+    
+    nose.appendChild(gasto);
     nose.appendChild(viaje)
 });
 
@@ -95,8 +96,8 @@ function gastoNafta(km, consumo, nafta){
     return result;
 }
 
-function gastoNoches(personas, costo, dias){
-    result = (personas * costo) * dias;
+function gastoNoches(personas, noche, dias){
+    result = (personas * noche) * dias;
 
     return result;
 }
