@@ -23,7 +23,7 @@
 
 
 
-
+//Primer ejercicio
 const form = document.getElementById('formulario').addEventListener('submit', function(e){
 const nombre = document.getElementById('nombre').value
 const apellido = document.getElementById('apellido').value
@@ -49,7 +49,7 @@ p.innerHTML = `Nombre:${nombre}, Apellido:${apellido}, Edad:${edad}, Productos:$
 container.appendChild(p);
 })
 
-
+//Ejercicio 3
 const form2 = document.getElementById('formuu').addEventListener('submit', function(a){
     const pesos = Number (document.getElementById('pesos').value);
     const peso = (pesos*280)
@@ -60,3 +60,43 @@ const form2 = document.getElementById('formuu').addEventListener('submit', funct
     console.log(calculos)
     cuenta.appendChild(calculos)
 })
+
+//Ejercicio 4
+const form3 = document.getElementById('formu3').addEventListener('submit', function (f) {
+
+    const destino = document.getElementById('destino').value
+    const personas = Number(document.getElementById('personas').value)
+    const km = Number(document.getElementById('km').value)
+    const nafta = Number(document.getElementById('nafta').value)
+    const consumo = Number(document.getElementById('consumo').value)
+    const noche = Number(document.getElementById('noche').value)
+    const dias = Number(document.getElementById('dias').value)
+    f.preventDefault();
+
+    const nose = document.querySelector('.viajes');
+
+    const viaje = document.createElement('viaje')
+    viaje.innerHTML = ` El destino es: ${destino}, La Cantidad de Personas: ${personas}, Los Km son: ${km}, El Precio de la Nafta: ${nafta}, Precio por noche (x persona): ${noche}, Dias de Viaje: ${dias}`;
+
+    let combustibles = gastoNafta(km, consumo, nafta);
+    let estadias = gastoNoches(personas, noche, dias);
+
+    gastoNafta.innerHTML = `El gasto en nafta es: $` + combustibles
+    gastoNoches.innerHTML = `El gasto por noche: $` + estadias
+
+    nose.appendChild(viaje)
+});
+
+//Funciones
+function gastoNafta(km, consumo, nafta){
+    let distancia = km / consumo;
+    let result = distancia * nafta;
+
+    return result;
+}
+
+function gastoNoches(personas, costo, dias){
+    result = (personas * costo) * dias;
+
+    return result;
+}
